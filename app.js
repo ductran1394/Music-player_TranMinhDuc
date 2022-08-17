@@ -32,7 +32,8 @@ let timer = setInterval(displayTimer, 500);
 function FormatTimer(number) {
    const minutes = Math.floor(number / 60);
    const seconds = Math.floor(number - minutes * 60);
-   return `${minutes}:${seconds}`;
+
+   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 }
 
 const app = {
